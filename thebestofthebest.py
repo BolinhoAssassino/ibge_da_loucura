@@ -2,9 +2,9 @@ def autoincremento(vinicial,vfinal, idade_final, idade_inicial):
 	vinicial2 = vinicial 
 	while vinicial <= vfinal:
 		if vinicial < 100:
-			print('UPDATE "Pessoa13_RR" set "V0{}" = null where "V0{}" = {} ;'.format(vinicial,vinicial, "'x'"))
+			print('UPDATE "Pessoa13_RR" set "V0{}" = null where "V0{}" = {} ;'.format(vinicial,vinicial, "'X'"))
 		else:
-			print('UPDATE "Pessoa13_RR" set "V{}" = null where "V{}" = {};'.format(vinicial,vinicial, "'x'"))
+			print('UPDATE "Pessoa13_RR" set "V{}" = null where "V{}" = {};'.format(vinicial,vinicial, "'X'"))
 		vinicial += 1
 		
 	while idade_inicial<= idade_final:
