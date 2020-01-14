@@ -9,9 +9,9 @@ def autoincremento(vinicial,vfinal, idade_final, idade_inicial):
 		
 	while idade_inicial<= idade_final:
 		if vinicial2 < 100:
-			print('insert into populacao_ano(setor, ano_nascimento ,populacao) select b.id,{}, "V0{}"::integer from "Pessoa13_RR" a, "pacotao" b where a."Cod_setor" = b."CD_GEOCODI"; '.format(" ((2020-{}||'-01-01')::varchar)::date ;".format(idade_inicial),vinicial2) )
+			print('insert into populacao_ano(setor, ano_nascimento ,populacao) select b.id,{}, "V0{}"::integer from "Pessoa13_RR" a, "pacotao" b where a."Cod_setor" = b."CD_GEOCODI"; '.format(" ((2020-{}||'-01-01')::varchar)::date ".format(idade_inicial),vinicial2) )
 		else:
-			print(' insert into populacao_ano(setor, ano_nascimento ,populacao)  select b.id,{}, "V{}"::integer from "Pessoa13_RR" a, "pacotao" b where a."Cod_setor" = b."CD_GEOCODI"; '.format(" ((2020-{}||'-01-01')::varchar)::date ;".format(idade_inicial),vinicial2) )
+			print(' insert into populacao_ano(setor, ano_nascimento ,populacao)  select b.id,{}, "V{}"::integer from "Pessoa13_RR" a, "pacotao" b where a."Cod_setor" = b."CD_GEOCODI"; '.format(" ((2020-{}||'-01-01')::varchar)::date ".format(idade_inicial),vinicial2) )
 
 		vinicial2 += 1
 		idade_inicial += 1
