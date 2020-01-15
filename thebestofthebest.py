@@ -1,3 +1,4 @@
+
 def autoincremento(vinicial,vfinal, idade_final, idade_inicial):
 	vinicial2 = vinicial 
 	while vinicial <= vfinal:
@@ -15,5 +16,14 @@ def autoincremento(vinicial,vfinal, idade_final, idade_inicial):
 
 		vinicial2 += 1
 		idade_inicial += 1
-
+def bituim(inicieixon, finalizeixon, entre):
+        rank = 0
+        print('with tabela as (SELECT c.id,    a.quantidade,    b.domicilios_particulares,    b.domicilios_particulares_permanentes,    c.geom ,  case ')
+        while inicieixon <= finalizeixon:
+                soma = inicieixon+entre
+                print("when domicilios_particulares between {} and {} then '{}'".format(inicieixon,soma,'{}-{}'.format(inicieixon, soma)))
+                inicieixon += entre
+        print("when domicilios_particulares > {} then '{}+'".format(finalizeixon, finalizeixon))
+        
+        print("end  as entre FROM domicilios_renda b,    domicilios_todos a,   pacotao c  WHERE b.domicilios_id = a.id AND a.setor = c.id) select *, regexp_replace(case when entre = '1000000+' then '990000100000009999' else entre end ,'[-+]','')::bigint as rank  from tabela")
 # // -- tabela de setores tem q ter o nome de pacotao EXEMPLO autoincremento(35, 134, 100,1)
